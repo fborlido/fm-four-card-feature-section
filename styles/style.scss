@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+// Colors
+
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+
+$VeryDarkBlue: hsl(234, 12%, 34%);
+$GrayishBlue: hsl(229, 6%, 66%);
+$VeryLightGray: hsl(0, 0%, 98%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  background-color: $VeryLightGray;
+  font-weight: 200;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  font-size: 1.5em;
+  font-weight: 200;
+  color: $VeryDarkBlue;
+  margin-top: 3em;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: $VeryDarkBlue;
+  margin-bottom: 1em;
+}
+
+.content {
+  color: $GrayishBlue;
+  font-weight: 400;
+  margin: 0 auto;
+  max-width: 40em;
+}
+
+.cards {
+    margin-top: 5em;
+}
+
+.card {
+  background-color: white;
+  margin: 1.5em 0;
+  padding: 1.5em;
+  text-align: left;
+  border-radius: 0.5em;
+  height: 15em;
+  box-shadow: 0px 8px 24px 0px rgba(76, 78, 97, 0.2);
+  position: relative;
+  width: 100%;
+
+  .content {
+    font-size: 0.8em;
+  }
+
+  .title {
+    font-size: 1.3em;
+  }
+
+  img {
+    position: absolute;
+    right: 1.5em;
+    bottom: 1.5em;
+  }
+}
+
+.supervisor {
+  border-top: 3px solid $Cyan;
+  grid-area: sup;
+}
+
+.team-builder {
+  border-top: 3px solid $Red;
+  grid-area: tb;
+}
+
+.karma {
+  border-top: 3px solid $Orange;
+  grid-area: k;
+}
+
+.calculator {
+  border-top: 3px solid $Blue;
+  grid-area: calc;
+}
+
+@media screen and (min-width: 400px) {
+
+    .container {
+        width: 60%;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  
+      align-items: center;
+  
+      gap: 1.5em;
+  
+      grid-template-areas:
+        "sup tb calc"
+        "sup k  calc";
+    }
+
+    .card {
+        margin: 0;
+
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+  }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
